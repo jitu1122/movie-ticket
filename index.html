@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Ticket Booking</title>
+
+    <!-- Supportive Files -->
+    <script type="text/javascript" defer src="main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap and JQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="d-flex grid-outer p-3 p-md-3 p-lg-5">
+    <div class="cont-main w-100 d-flex justify-content-center align-items-center">
+        <div class="seat-layout-container shadow p-2 m2">
+            <div><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504.67 56.45"><defs><linearGradient id="linear-gradient" x1="324.67" y1="156.67" x2="324.67" y2="100.22" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="0.31" stop-color="#ccefff" stop-opacity="0.34"/><stop offset="0.65" stop-color="#98deff" stop-opacity="0.69"/><stop offset="0.89" stop-color="#77d3ff" stop-opacity="0.91"/><stop offset="1" stop-color="#6acfff"/></linearGradient></defs><title>Untitled-1</title><path d="M347.9,100.68C230.64,96.8,139.23,118.26,91,132.32L72.33,156l504.67.67-28.67-24.35C504.7,119.54,435.53,103.58,347.9,100.68Z" transform="translate(-72.33 -100.22)" style="fill:url(#linear-gradient)"/><path d="M91,132.32a873,873,0,0,1,457.33,0" transform="translate(-72.33 -100.22)" style="fill:none;stroke:#1b346c;stroke-miterlimit:10;stroke-width:3px"/></svg></div>
+            <div style="text-align: center; color: #1B346C; font-size: 12px; font-weight: 500">All Eyes will this way</div>
+            <div id="seat-layout" class="p-2"></div>
+            <div class="d-flex align-items-center justify-content-center">
+                <div class="grid-item free-seat mr-1 mr-md-3 ml-3"></div>
+                <div class="legend">Available</div>
+                &nbsp;
+                <div class="grid-item selected mr-1 mr-md-3 ml-3"></div>
+                <div class="legend">Selected</div>
+                &nbsp;
+                <div class="grid-item blocked-seat mr-1 mr-md-3 ml-3"></div>
+                <div class="legend">Unavailable</div>
+            </div>
+        </div>
+        <div class="seat-layout-container ticket-box shadow p-3 p-sm-4 m2 price-box">
+            <div class="d-flex align-items-center booking-d">
+                Booking Details
+                <div class="ml-auto mr-0" id="total-seat-selected">0</div>
+            </div>
+            <div class="ticket-details">
+                <div class="row m-0 align-items-center m-b-15">
+                    <div style="font-weight: 500" class="col-6 p-0">Tamasha</div>
+                    <div style="font-size: 11px;" class="col-6 p-0">25 May, 08:00PM</div>
+                </div>
+                <div class="row m-0 align-items-center m-b-15">
+                    <div class="col-6 p-0">
+                        <div style="font-size: 10px">Cinema</div>
+                        <div style="font-weight: 500">PVR Icon</div>
+                    </div>
+                    <div class="col-6 p-0">
+                        <div style="font-size: 10px">ID</div>
+                        <div style="font-weight: 500">Q12QVHX7</div>
+                    </div>
+                </div>
+                <div class="row m-0 align-items-center m-b-15">
+                    <div class="col-6 p-0">
+                        <div style="font-size: 10px">Audi</div>
+                        <div style="font-weight: 500">03</div>
+                    </div>
+                    <div class="col-6 p-0">
+                        <div style="font-size: 10px">Seats</div>
+                        <div id="selected-seats" style="font-weight: 500"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-and-button d-flex justify-content-center align-items-center">
+                <div class="d-flex align-items-center price-text">
+                    <div class="m-0 align-items-center text-center">
+                        Total Amount
+                    </div>
+                    <div class="m-0 align-items-center text-center m-b-15 amount-text">
+                        <div><span>₹</span><span id="amount">0</span></div>
+                    </div>
+                </div>
+                <div class="price-text">
+                    <button class="btn btn-primary">Book Now</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
